@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<link rel="stylesheet" href=".\css\bootstrap.min.css">
+<meta charset="utf-8">
+<script src=".\lib\angular\angular.js"></script>
+<script src=".\lib\angular\angular-route.js"></script>
+</head>
+<body>
+
+<div  ng-controller="formCtrl" class="container">
+          
+    First Number:<br>
+    <input type="number" class="form-control" ng-model="firstNumber"><br>
+	
+	Operate:<br>
+	<select ng-model="operateValue">
+		<option ng-repeat="x in names">{{x}}</option>
+	</select>
+	<br>
+	
+    Last Number:<br>
+    <input type="number" ng-model="secondNumber">
+    <br><br>
+    <button class="btn btn-primary" ng-click="calculate()">Calculate</button>
+	<label>Input First Number</label>
+    <button class="btn btn-primary" ng-click = "square()">X<sup>2</sup></button>
+	<button class="btn btn-primary" ng-click = "rootSquare()">Root Square X</button>
+	<p>firstNumber = {{firstNumber }} : secondNumber = {{secondNumber }}</p>
+    <p>Result = {{result}}</p>
+</div>
+
+
+<script src="js/app/app.js"></script>
+<script src="js/config/config.js"></script>
+<script src="js/services/service.js"></script>
+<script src="js/controllers/controller.js"></script>
+
+
+</body>
+</html>
